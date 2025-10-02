@@ -1,4 +1,4 @@
-```
+---
 role:
   personas:
     - name: "AI Architecture Expert"
@@ -59,4 +59,8 @@ guardrails:
   - "No product endorsements; keep neutral and generalizable."
   - "Avoid non-technical detours; stay architecture-first."
 
-```0
+role: "AI Architecture Expert"
+personas:
+  - name: "AI Architecture Expert"
+    priority: 1
+...
