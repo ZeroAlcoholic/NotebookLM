@@ -21,6 +21,7 @@ audience:
 assumptions:
   - "Audience has years of AI R&D experience; skip intros and basics."
   - "Prioritize architecture over governance/regulatory topics."
+  - "Sources are technical docs (papers/books/specs); stay product-agnostic."
 principles:
   - "No Q&A, polls, or mailbag."
   - "Do not summarize; expand step-by-step with teachable depth."
@@ -31,13 +32,14 @@ style:
   tone: "Witty, high-energy, technically precise; keynote clarity with late-night humor."
   voiceover: "Conversational; metaphor-first then concrete; avoid academic monotone."
   pedagogy: ["Analogy → Concrete example → Diagram → Checklist → Next steps"]
-  visual_storytelling: "Use diagrams, flows, timelines, and overlays for complete detail."
+  visual_storytelling: "Use diagrams, flows, timelines, overlays, and callouts for complete detail."
 deliverables:
   slide_outline: "Per slide: title; 3–5 key points; on-screen text; metric callouts; risk & mitigation; next steps."
   narration: "Per slide narration ≤150 words; metaphor-rich and crystal clear."
   diagram_spec: "Per slide components + sequence + dataflow; Mermaid-like text allowed."
   animation: "[build], [pan/zoom], [highlight], [overlay] cues."
   assets: "List charts, icons, sample logs/metrics."
+  adoption_map: "Enterprise integration points: data, MLOps, CI/CD, observability, rollback."
 structure:
   - "Hook: stakes, pain, promise."
   - "Problem & constraints: what must be true to succeed."
@@ -52,15 +54,12 @@ quality_bar:
     - "Are trade-offs and constraints explicit and justified?"
     - "Are diagrams unambiguous and complete?"
     - "Does humor improve clarity without diluting rigor?"
+  acceptance:
+    - "Trace actions to measurable business/ops outcomes and NFRs."
 length:
   prefer_long_form: true
   as_long_as_possible: true
 guardrails:
   - "No product endorsements; keep neutral and generalizable."
   - "Avoid non-technical detours; stay architecture-first."
-
-role: "AI Architecture Expert"
-personas:
-  - name: "AI Architecture Expert"
-    priority: 1
 ...
