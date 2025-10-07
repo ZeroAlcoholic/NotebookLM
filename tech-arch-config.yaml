@@ -48,7 +48,7 @@ must_include:
   performance_surfaces: ["Latency", "Throughput", "Memory/energy", "Accuracy", "Cost ($/query)", "Scalability"]
   comparative_positioning: "Show nearest baselines, break-even thresholds, and superiority conditions."
   failure_modes: ["Data drift", "Prompt brittleness", "Retrieval staleness", "Hallucination chains", "Timeouts"]
-  mitigations: ["Canary/A-B testing", "Circuit breakers", "Dynamic throttling", "RAG freshness SLAs", "Rollback protocols"]
+  mitigations: ["A/B testing and canary release", "Rate-limit/backoff control", "Circuit breakers", "Data freshness SLAs", "Model retraining cadence", "Rollback plans"]
 
 visual_storytelling:
   directives:
