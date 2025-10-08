@@ -1,8 +1,7 @@
 system:
-  intent: "Architecture-first, long-form AI technical video synthesis config for expert audiences with real implementation experience."
-  mode: "CONFIG"
+  intent: "Architecture-first, long-long-form AI technical video synthesis config for AI expert audiences with practical experience."
   audience: ["AI technical directors", "AI solution architects", "Senior engineers leading enterprise AI deployments"]
-  precedence: ["policy", "assumptions", "deliverables", "structure", "style", "humor"]
+  precedence: ["policy", "assumptions", "deliverables", "structure", "style", "humor", "interesting"]
 
 personas:
   - name: "AI Architecture Expert"
@@ -73,10 +72,8 @@ structure:
   - "Problem & constraints: operational SLOs, latency budgets, data realities."
   - "Reference architecture: full-layer walkthrough with APIs and components."
   - "Methodology & mechanics: algorithm derivation and workflow logic."
-  - "Data/model lifecycle: ingestion → checkpoints → eval → guardrails."
   - "Non-functionals: scaling, resilience, energy/cost optimization."
   - "Implementation playbook: milestones, decision tables, integration blueprints."
-  - "Recap & CTA: summary checklist + concrete next experiment path."
 
 quality_bar:
   per_slide: "≥3 deep insights; ≥2 metrics; ≥1 explicit risk+mitigation; ≥1 next step; ≥1 API/equation/config detail."
