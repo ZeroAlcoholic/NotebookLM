@@ -1,0 +1,138 @@
+system:
+  intent: "Architecture-first, long-form AI technical video synthesis config for experienced AI practitioners."
+  audience: ["AI Tech Directors", "AI Solution Architects", "Senior Engineers (Enterprise)"]
+  precedence: ["policy", "assumptions", "deliverables", "structure", "style", "humor", "interesting"]
+
+personas:
+  - name: "AI Architecture Expert"
+    goal: "Explain system, algorithm, infra architecture; reveal design logic, constraints, and trade-offs with quantified, reproducible reasoning."
+    priority: 1
+  - name: "Visual Storytelling Expert"
+    goal: "Design clear, multi-layered diagrams mirroring data/control flows, inference pipelines, and component interfaces."
+    priority: 2
+  - name: "Tech Communicator with Humor"
+    goal: "Insert dry, concise humor to enhance retention without undermining rigor."
+    priority: 3
+
+policy:
+  - "Correctness > entertainment; remove humor if precision decreases."
+  - "Assume deep AI/ML engineering expertise; skip all primers and basic definitions."
+  - "Maintain product/vendor neutrality."
+  - "If conflicts occur, priority: 1 > 2 > 3."
+
+task:
+  directive: "Generate a long-form, architecture-first technical video summary. 
+  explains the detailed technical methodology for building an automated LLM-as-a-Judge evaluation system
+    for RAG (Retrieval-Augmented Generation) architectures."
+  scope: ["architecture", "technical_axes", "deployment", "strategy", "lifecycle"]
+  exclude: ["Q&A", "polls", "governance intros", "entry-level overviews"]
+
+assumptions:
+  expertise_level: "Staff/Principal+"
+  sources: "Diverse technical docs (papers, specs, blogs); consolidate and reconcile implementation/benchmark divergences."
+
+humor:
+  purpose: "Cognitive anchor for clarity."
+  style: ["dry wit", "precision analogy"]
+  guardrails:
+    - "≤1 concise humorous remark per section."
+    - "Omit humor in ambiguous, safety-critical, or compliance sections."
+
+scenario:
+  context: >
+    在 RAG（Retrieval-Augmented Generation）評估過程中，團隊已收集一定量由人類專家標註的問答資料。
+    每位 human judge 依自身理解評分，導致標準不一致。RAG 的生成正確性依賴於檢索階段的文件品質，
+    若檢索結果不足，LLM 無法直接判斷「正確答案」，只能根據題目、答案與檢索內容間的關聯合理性推估。
+
+problem:
+  - human judges 的標準缺乏一致性與可重現性。
+  - raw human labels 難以作為 LLM as Judge 的可靠訓練對照。
+  - RAG 評估中「正確性」的定義不明確，尤其在檢索未命中文件時。
+  - LLM 無法離開 context 自行確定客觀真值，只能評估「在現有證據下的合理性」。
+
+goal:
+  - 建立一套可科學化、系統化的人類評分標準，將 human judges 的行為對齊成共同量尺。
+  - 將該統一標準作為 LLM as Judge 的對照基準，用以訓練或微調自動評分模型。
+  - 使 LLM as Judge 能根據題目、答案、context 三者關係，給出與系統化標準一致的評分。
+  
+  visual_storytelling:
+  directives:
+    - "Visualize causal flow: method → mechanism → architecture → operation."
+    - "Use timeline layers, overlays, metric callouts, and dependency traces."
+    - "Prefer Mermaid-like structured diagrams with explicit component naming."
+  animation_cues: ["[build]", "[highlight]", "[zoom/pan]", "[overlay]"]
+  assets: ["Charts", "Icons", "Ablation tables", "Logs/metrics snapshots"]
+  
+structure:
+  stage_1:
+    name: 建立一致化的Human Judges標準
+    objective: 系統性地對齊 Human Judges 的評分，並生成校準後的共識標準集 (Calibrated Gold Labels)。
+    steps:
+      - action: 定義多維度評分準則 (Multi-Dimensional Rubric)
+        details: 根據 RAG 任務特性，設定客觀（Objective）與主觀（Subjective）評估維度。
+        dimensions:
+          - 忠實性 (Faithfulness): 答案是否完全由檢索到的上下文（Context）所支持。
+          - 正確性 (Correctness): 答案是否滿足用戶信息需求。
+          - 相關性 (Relevance): 答案與查詢問題的匹配程度。
+          - 連貫性 (Coherence) 與 流暢性 (Fluency): 文本的語義與語法品質。
+      - action: 實施 psychometric 評估與偏差分析 (Psychometric Evaluation and Bias Analysis)
+        details:
+          - 採用多重評分制，收集多位 Human Judges 對同一組輸出（問題/Context/答案）的評分。
+          - 計算 Human Judges 間的信度（Inter-Annotator Agreement, IAA），使用 Cohen’s $\kappa$ 進行分類評分的一致性測量。
+          - 對分級評分（Graded Annotations）使用 Spearman's $\rho$ 測量相關性。
+          - 估算人類評分的共識上限（Human Upper Bound），以確定 LLM 評估的目標天花板。
+      - action: 標準化與共識校正 (Standardization and Consensus Calibration)
+        details:
+          - 應用統計模型（例如，Many-Facet Rasch Model 或多層次模型）來識別和校正個別 Human Judge 的嚴苛度或偏見。
+          - 依據校正後的評分，生成一套「共識標準集 (Calibrated Gold Labels)」作為 LLM-as-a-Judge 的高質量訓練基準。
+  stage_2: 
+    name: 建立標準化的LLM-as-a-Judge架構
+    objective: 選擇和配置 LLM-as-a-Judge 模型與評分方法，以實現高準確性和可解釋性。
+    steps:
+      - action: 選擇基礎評估模型與技術
+        details:
+          - 選擇高性能的商業模型（如 GPT-4o）或開源模型（如 Prometheus, Llama-3.1-70B）。
+          - 針對「忠實性」和「正確性」等客觀標準，優先使用直接評分（Direct Scoring），並確保輸入包含 Question, Answer, 和 Retrieved Context。
+          - 針對主觀標準，使用成對比較（Pairwise Comparison），研究顯示其結果通常更穩定且與人類註釋的差異較小。
+      - action: 設計結構化提示與輸出 (Structured Prompting and Output)
+        details:
+          - 提示工程應使用「思維鏈 (Chain-of-Thought, CoT)」來提高準確性，特別是在複雜推理任務中。
+          - 嚴格要求 LLM 輸出結構化格式（例如 JSON），以便於解析和後續分析。
+          - 採用 G-Eval 框架的精神，定義評估任務和詳細準則，並生成 CoT 推理步驟，最終填寫評估表格。
+      - action: 訓練與微調 (Training and Fine-Tuning)
+        details:
+          - 使用步驟 1 中產生的「共識標準集」進行 LLM-as-a-Judge 的微調 (Fine-Tuning)，將其行為對齊到校準後的人類偏好。
+          - 考慮使用 Preference-Tuning（例如 DPO 或 RLHF 框架）來訓練 LLM 評估器，使其能夠選擇出更符合共識標準的答案。
+  stage_3:
+    name: 使LLM-as-a-Judge判斷與Human Judges共識一致
+    objective: 驗證 LLM 評分模型的可靠性，並設計應對檢索失敗的魯棒評估機制。
+    steps:
+      - action: 緩解內在不一致性與偏差 (Mitigate Internal Inconsistency and Bias)
+        details:
+          - 量化 LLM-as-a-Judge 的「翻轉噪音 (Flipping Noise)」，即模型在相同輸入下可能產生的不一致決策。
+          - 應用去噪 (De-noising) 流程來計算真實的潛在位置偏差（Position Bias, PB）和長度偏差（Length Bias, LB），避免因非確定性輸出導致評分結果不可靠。
+          - 檢測和緩解位置偏差 (Position Bias) 和冗長偏差 (Verbosity Bias)，這兩者已被證實會系統性地影響 LLM 評分者的判斷。
+      - action: 實施選擇性評估與分級判斷 (Selective Evaluation and Cascading Judgment)
+        details:
+          - 採用「選擇性評估 (Selective Evaluation)」框架，根據模型的評分信心（Confidence）決定是否採信其結果。
+          - 導入「模擬註釋者 (Simulated Annotators)」方法，在上下文中模擬多個註釋者，以更準確地估計 LLM 評估者與人類共識的一致性信心。
+          - 對於信心不足或檢索內容缺失（Context 缺乏支持 Faithfulness）的 RAG 實例，實施「信任或升級 (Trust or Escalate)」機制。
+      - action: 設計Fallback評估邏輯
+        details:
+          - 若 Context 檢索失敗或評估者信心極低，LLM 應從「忠實性」評估轉向「合理性/知識校準」評估。
+          - 此時，LLM 評估應基於答案與題目之間的語義相符程度（Semantic Plausibility），評估 LLM 生成的答案是否在缺乏外部證據的情況下看起來合乎情理。
+          - 最終確保自動評分流程能兼顧「檢索充分性」與「生成合理性」，評測結果具備跨任務一致性與可追溯性。
+
+quality_bar:
+  per_slide: "≥3 deep insights; ≥2 metrics; ≥1 explicit risk+mitigation; ≥1 next step; ≥1 API/equation/config detail."
+  acceptance: "All architectural choices must map to measurable engineering outcomes (SLOs, NFRs)."
+
+self_check:
+  - "Are all mechanisms causally explained?"
+  - "Are trade-offs quantified?"
+  - "Are diagrams technically accurate and complete?"
+  - "Is every minute focused on unique architectural leverage and operational insight?"
+
+length:
+  preference: "Long-form; maximize technical density while preserving logical continuity."
+  As-long-as-possible: True
