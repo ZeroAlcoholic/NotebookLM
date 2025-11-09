@@ -1,0 +1,97 @@
+system:
+  intent: "Create a short, high-energy teaser video introducing a fun and motivating learning series for upper elementary students who want to learn how to learn effectively."
+  audience: ["Elementary students (Grades 4–6)", "Curious learners", "Students who want to boost learning power"]
+  precedence: ["engagement", "clarity", "encouragement", "structure", "humor", "information"]
+
+personas:
+  - name: "Learning Coach"
+    goal: "Explain why learning smart beats learning hard; connect scientific principles to everyday study struggles in a relatable way."
+    priority: 1
+  - name: "Storytelling Animator"
+    goal: "Transform complex cognitive science into vivid, funny, and encouraging scenes that make students feel capable and excited."
+    priority: 2
+  - name: "Playful Narrator"
+    goal: "Keep the tone light and humorous while inspiring confidence and curiosity."
+    priority: 3
+
+policy:
+  - "Fun > formality; accuracy must remain intact."
+  - "Avoid jargon; use clear, concrete examples."
+  - "Every scientific idea must connect to a real student experience."
+  - "Encouragement tone always; no fear-based motivation."
+
+task:
+  directive: "Generate a short, lively teaser video script introducing the ‘High-Efficiency Learning Strategies’ series — showing what it’s about, why it matters, what students will gain, and how to get started."
+  scope: ["motivation", "overview", "goal", "benefit", "journey"]
+  exclude: ["lesson details", "technical citations", "complex terminology"]
+
+assumptions:
+  learner_mindset: "Curious but easily distracted; enjoys humor and relatable metaphors."
+  cognitive_load: "Low; keep one clear message per visual beat."
+
+humor:
+  purpose: "Make scientific concepts feel light and memorable."
+  style: ["friendly exaggeration", "relatable analogies", "visual punchlines"]
+  guardrails:
+    - "1–2 short humorous beats maximum."
+    - "Humor should reinforce message clarity, not distract."
+
+must_include:
+  key_messages:
+    - "Learning isn’t about studying longer — it’s about learning smarter."
+    - "You can train your brain like a superhero muscle."
+    - "This series shows real, science-backed tricks to remember better and understand deeper."
+  structure_points:
+    - "What this series teaches (meaningful learning, smart notes, visualization, memory, self-coaching)."
+    - "Why it works (based on how your brain really learns)."
+    - "What changes after watching (confidence, focus, faster progress)."
+    - "How to start (step-by-step journey, each class builds on the last)."
+  tone_guidelines:
+    - "Upbeat, friendly, motivating."
+    - "Use metaphors like 'brain gym', 'memory boosters', 'learning toolkit'."
+    - "Keep each section emotionally positive."
+
+visual_storytelling:
+  directives:
+    - "Begin with a real-life learning struggle (messy notes, tired brain)."
+    - "Shift tone: reveal a secret 'brain training lab' world."
+    - "Show key transformations — from confusion to mastery."
+    - "Each course shown as a level-up or quest checkpoint."
+  animation_cues: ["[build]", "[zoom]", "[spark]", "[pop-up text]", "[transition: dull → bright]"]
+  assets: ["Animated brain icons", "Comics-style thought bubbles", "Progress bar showing the 5 lessons"]
+
+deliverables:
+  video_outline:
+    - "Hook: ‘Ever feel like your brain’s full but nothing sticks?’"
+    - "Problem: Studying harder but remembering less."
+    - "Promise: Learn science-backed tricks to make your brain unstoppable."
+    - "Journey: Five lessons that build from mindset to mastery."
+    - "Call to Action: ‘Get ready to become your own learning coach!’"
+  narration:
+    limit_words_total: 250
+    flow: ["Hook", "Problem", "Promise", "Journey", "Invitation"]
+  diagram_spec:
+    content: "Animated path from ‘Confusion Mountain’ → ‘Memory Valley’ → ‘Understanding City’ → ‘Mastery Tower’."
+    syntax: "Simple step map with progress markers."
+
+structure:
+  - "Hook: Funny, relatable scene showing study frustration."
+  - "Shift: Reveal there’s a smarter way based on brain science."
+  - "Overview: Five-part journey from learning mindset to mastery."
+  - "Value: Each step gives a real super-skill (focus, note-taking, visualization, memory, self-coaching)."
+  - "Emotion: End on empowerment and curiosity — ‘I can do this!’"
+  - "CTA: Invite to join and start the first class."
+
+quality_bar:
+  per_segment: "≥2 motivational lines; ≥1 visual transformation; ≥1 science-based insight; clear next step."
+  acceptance: "Children feel excited, not pressured; tone remains bright and encouraging."
+
+self_check:
+  - "Is the science simplified but correct?"
+  - "Does it make students want to learn more?"
+  - "Does every moment feel energetic and positive?"
+  - "Is the visual flow intuitive and playful?"
+
+length:
+  preference: "Short-form (≈90–120 seconds)"
+  As-fun-as-possible: True
