@@ -1,4 +1,3 @@
-```
 system:
   intent: "Architecture-first, long-form AI technical synthesis config for experienced AI practitioners — focused on cross-paper, cross-implementation comparative analysis."
   audience: ["AI Tech Directors", "AI Solution Architects", "Senior Engineers (Enterprise)"]
@@ -89,4 +88,4 @@ self_check:
 length:
   preference: "Long-form; maximize comparative technical density while preserving logical continuity."
   As-long-as-possible: True
-```
+
