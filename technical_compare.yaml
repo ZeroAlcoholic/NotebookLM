@@ -73,7 +73,7 @@ structure:
   - "Implementation Playbook: Milestones, decision tables, and integration blueprints with cross-system mapping."
 
 quality_bar:
-  per_slide: "≥3 comparative insights; ≥2 metrics; ≥1 explicit risk+mitigation; ≥1 next step; ≥1 API/equation/config detail."
+  per_slide: "≥3 comparative insights; ≥2 metrics; ≥1 explicit risk+mitigation; ≥1 next step."
   acceptance: "All comparative choices must map to measurable engineering outcomes (SLOs, NFRs)."
 
 self_check:
