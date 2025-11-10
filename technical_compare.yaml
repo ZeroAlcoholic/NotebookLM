@@ -32,9 +32,6 @@ assumptions:
 humor:
   purpose: "Cognitive anchor for clarity."
   style: ["dry wit", "precision analogy"]
-  guardrails:
-    - "≤1 concise humorous remark per section."
-    - "Omit humor in ambiguous, safety-critical, or compliance sections."
 
 must_include:
   key_innovations: ["Algorithmic novelty", "System topology", "Training/inference regime", "Evaluation protocol", "Data curation", "Optimization strategies"]
@@ -70,7 +67,7 @@ deliverables:
 structure:
   - "Hook: Real-world stakes, operational pain, and the comparative innovation space."
   - "Problem & Constraints: Operational SLOs, latency budgets, and data realities across contexts."
-  - "Reference Architectures: Layer-by-layer walkthrough comparing APIs and component structures."
+  - "Reference Architectures: Layer-by-layer walkthrough."
   - "Methodologies & Mechanics: Algorithmic logic and workflow contrasts."
   - "Non-Functionals: Scaling, resilience, and energy/cost optimization comparisons."
   - "Implementation Playbook: Milestones, decision tables, and integration blueprints with cross-system mapping."
