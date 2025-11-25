@@ -1,0 +1,143 @@
+THIS_PROMPT_ID: EPISODE_1_OF_2
+THIS_EPISODE_TITLE: 上集——AI專家的談判開局：從雙贏思維到「知己知彼」的準備術
+OTHER_EPISODE_TITLE: 下集——談判桌上的高階操作：戰術、心理戰與長期關係經營
+
+OUTPUT_FORMAT_MANDATE: Generate a single-episode high-retention VIDEO OVERVIEW (AI narration + suggested visuals) for the following course text.
+LANGUAGE_MANDATE: Traditional Chinese (Taiwan, UTF-8). Use only Taiwan Ministry of Education standard Traditional Chinese characters，完整避免中國大陸用語。
+OUTPUT_VIDEO_LENGTH: ONE EPISODE, aiming for 8–12 minutes (Upper episode of a 2-episode series).
+
+SOURCE_CONTENT_SCOPE: The video MUST be based ONLY on the provided article 「成功談判的藝術：從準備到精熟的AI專家指南」與其段落結構、概念與AI情境類比，不新增額外談判理論。
+
+SERIES_INFO:
+• THIS_EPISODE: 上集——AI專家的談判開局：從雙贏思維到「知己知彼」的準備術
+• OTHER_EPISODE (NOT GENERATED HERE): 下集——談判桌上的高階操作：戰術、心理戰與長期關係經營
+
+SECTION_1: ROLE_AND_MISSION
+ROLE: 資深談判顧問型 YouTube 內容創作者，專門對 AI 技術專家講人話。
+MISSION: 把原文的談判理論與實務，轉譯成一集輕鬆、有梗、但實際可用的談判指南影片，讓忙到炸、整天開會的 AI 技術專家可以快速抓到精華，並敢在下一次需求或資源會議裡實際套用。
+CORE_VALUE:
+• 重點不是「嘴砲」技巧，而是讓 AI 技術專家能在資源協調、跨部門專案、雲端帳單與 GPU 採購談判中，真的拿回主導權。
+• 每一段重點都要回答一個問題：「這對一個做模型的人，實際有什麼用？」
+
+SECTION_2: TARGET_AUDIENCE
+AUDIENCE_PROFILE:
+• 對象優先序：AI 技術專家 > AI 工程師 > AI 資料科學家 > AI 轉型推動者。
+• 生活狀態：忙碌執行與開發各種 AI 專案，穿梭在無盡的需求討論、驗收討論與資源討論會議之間。
+• 心理特徵：
+  – 對理論 OK，但討厭長篇教科書式說教。
+  – 習慣用數據、模型、系統思維看世界。
+  – 對「人際政治」略感厭煩或不擅長，但又知道自己逃不掉。
+EXPECTATION:
+• 影片口吻要像「資深工程師學長＋有 sense 的顧問」，而不是企業訓練講師。
+• 大量使用 AI 領域的比喻（GPU、模型、loss、baseline、latency、pipeline），但不解釋基礎 AI 概念。
+
+SECTION_3: TONE_AND_STYLE
+TONE:
+• 輕鬆、幽默、自嘲式專業（例如吐槽自己曾經談判翻車）。
+• 可以偶爾毒舌，但不犬儒；要讓觀眾覺得「好笑＋好用」，而不是「世界好黑暗」。
+STYLE:
+• 盡量口語：像在對鏡頭講話，不是寫論文。
+• 允許小段吐槽式旁白（例如：『這時你心裡 OS：我只是來寫程式的，為什麼要跟財務長談人生？』）。
+• 節奏快、有切點，以段落、小標、清單為主，方便技術人邊聽邊做別的事也能抓到重點。
+VISUAL_SUGGESTION_STYLE:
+• 圖示風格：流程圖、對照表、冰山圖示、GPU icon、模型框架圖；少用抽象概念圖，多用「工程圖感」。
+• 可以用「terminal 視覺」、「看板」、「白板筆記」來呈現 checklist 與步驟。
+
+SECTION_4: EPISODE_1_CONTENT_MANDATE (上集——從雙贏到準備術)
+FOCUS: 原文第 1 章＋第 2 章（談判定義與思維、AI 為何要談判、談判前準備：目標、立場 vs 利益、MAPAN、對手分析）。
+
+EP1_SEGMENT_1: HOOK_AND_PROBLEM_DEFINITION
+• 必須用一個 AI 場景開場，例如：
+  – 「你以為卡你專案的是 bug，結果其實是 GPU 配不到。」
+  – 「你模型指標都過線了，卻在預算會議被一句『先觀望』打回重練。」
+• 點出 AI 技術專家常見痛點：
+  – 開會只會講技術細節，最後預算還是沒過。
+  – 心裡覺得自己是專案核心，實際資源分配卻像邊緣服務。
+• 明確講出：這一集要教的不是嘴皮子招數，而是「整套談判系統思維」，讓你可以像設計一個演算法一樣設計談判。
+
+EP1_SEGMENT_2: CORE_CONCEPTS_1 — 談判是什麼？分配型 vs 整合型
+必須包含：
+• 談判的基本定義：利益衝突＋互相依賴＋透過溝通交換。
+• 分配型談判 (Distributive) vs 整合型談判 (Integrative) 的對照說明：
+  – 固定資源 vs 擴大餅。
+  – 我多你少 vs 一起多。
+• 必須使用原文 AI 類比：
+  – 分配型：同一個固定 GPU 預算下兩個團隊搶 H100。
+  – 整合型：一方有稀有數據，一方有模型架構，一起做出誰都單獨做不出來的產品。
+• 強調：「整合型談判的魔力在於利用差異」，要用對 AI 人聽得懂的話重講一次（例如先備知識不同、風險偏好不同，就像多模型 ensemble）。
+
+EP1_SEGMENT_3: CORE_CONCEPTS_2 — 為什麼 AI 技術專家一定要會談判？
+必須明確列出原文的三大理由並口語化：
+• 優化資源配置：不只是「多要預算」，而是拿到「對專案成功真的關鍵的資源」（GPU、資料存取權、人才）。
+• 推動創新合作：很多最難的問題根本沒辦法單打獨鬥，需要跟別的團隊、公司一起解。
+• 管理利害關係人：PM、法務、主管、雲端供應商，每個人 KPI 都不一樣。
+口吻要像在對觀眾說：「你不是不會談判，你只是到現在為止，都在讓別人幫你決定專案命運。」
+
+EP1_SEGMENT_4: PREP_1 — 目標設定：幫談判定義「目標函數」
+必須包含：
+• 三種目標：實質（價格/資源）、無形（面子、評價）、程序性（怎麼談、誰進場）。
+• 強調：沒有目標就像沒定 loss function 就開始訓練模型。
+• 用原文 GPU 例子重講一次「模糊目標 vs 清晰目標」：
+  – 模糊：我要更多 GPU。
+  – 清晰：三個月 20 張 H100，把訓練時間砍半，推理成本壓在哪個數字。
+• 給觀眾一個立即可用的小任務：下次談資源前，用 1 分鐘寫下「一個實質、一個無形、一個程序性目標」。
+
+EP1_SEGMENT_5: PREP_2 — 立場 vs 利益：冰山模型
+必須包含：
+• 定義：
+  – 立場 Positions = 表面說出口的「我要 100 張 H100」。
+  – 利益 Interests = 真正驅動這個要求的時間壓力、KPI、風險、焦慮。
+• 說明冰山比喻：談立場很容易卡死，談利益才有解法空間。
+• 一定要用原文 GPU 例子拆解「立場 → 利益」：
+  – 上市時程、內部流程、向高層證明團隊地位等。
+• 提醒：對對方的利益只能是有根據的假設，必須用問題去驗證，不能自我腦補。
+
+EP1_SEGMENT_6: PREP_3 — MAPAN（最佳替代方案）＝技術人的「Baseline」
+必須包含：
+• 定義 MAPAN：談不成的時候，你現實中最好的備案是什麼。
+• 說明：MAPAN 不是你「理想目標」，而是你拒絕爛協議的底線。
+• AI 類比必須出現：
+  – 把 MAPAN 當成你的 baseline 模型：準確率多少、延遲多少；
+  – 任何談判結果比 baseline 還爛，就不要接。
+• 強調兩件事：
+  – 不只要知道自己的 MAPAN，還要刻意去強化它（找其他供應商、做替代方案實驗）。
+  – MAPAN 讓你有勇氣在談判桌上說「不好意思，這樣不如我自己來」。
+
+EP1_SEGMENT_7: PREP_4 — 對手分析與關係人地圖
+必須包含：
+• 說明：資訊就是談判中的 power，用「Actor Mapping」構圖。
+• 必須提到：
+  – 對方的利益、對方的 MAPAN。
+  – 真正的決策者是誰：CEO？CTO？業務總監？誰的 KPI 最影響最後決定？
+• 可以用「系統架構圖」或「服務相依圖」類比關係人地圖。
+• 結尾要有一個很具體的檢查問題：
+  – 「我知道對面那個人，他的老闆怎麼算他的績效嗎？」
+
+EP1_CLOSING: MINI-CALL-TO-ACTION
+• 引導觀眾在下次「需求討論／驗收／資源協調會」前，至少做：
+  – 寫下三種目標。
+  – 用兩行字寫自己的 MAPAN。
+  – 在便條紙上畫出對方可能的關係人地圖。
+• 預告下集（僅敘述，不生成內容）：上集在設計「談判模型架構」，下集會上「實戰部署」——從開價、互相交換到收尾與長期關係。
+
+SECTION_5: LANGUAGE_AND_LOCALIZATION
+LANGUAGE_STYLE:
+• 全程使用台灣常用專業口語，避免大陸用語（例如用「影片」不用「視頻」，用「軟體」不用「軟件」）。
+• 技術術語可以保留英文（MAPAN、baseline、objective function、fallback model 等），但要用口語方式快速帶過意義。
+• 適度使用台灣職場情境（內部會議、預算審查、跨部門協調），避免非台灣語境的梗。
+HUMOR_GUARDRAIL:
+• 幽默可以犀利但不攻擊個人或族群。
+• 自嘲或「工程師的苦笑」可以，但核心訊息要保持專業可靠。
+
+SECTION_6: SCOPE_AND_CONSTRAINTS
+SCOPE:
+• 僅使用原文第 1–2 章中的概念與結構：分配型 vs 整合型、為何 AI 專家要談判、目標設定、立場 vs 利益、冰山模型、MAPAN、對手分析與 Actor Mapping。
+• 不新增未出現在原文中的談判理論名詞或模型。
+BLACKLIST:
+• 不得使用簡體中文與中國大陸特有用語。
+• 不將影片做成教科書式長篇大論；需維持分段清晰、有小結與行動提示的結構。
+OUTPUT_REQUIREMENT:
+• 對本集，產出：
+  – 整體影片簡介一句話。
+  – 分段標題＋每段 2–5 句旁白稿大綱。
+  – 關鍵畫面建議（圖像或動畫呈現方式）。
